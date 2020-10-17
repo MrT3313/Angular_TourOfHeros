@@ -6,13 +6,13 @@ Thank you _**Anonymous Company**_ for the opportunity to interview with you and 
 
 ---
 
-During the interview I was asked about my `process of learning` new technolgies and would like to elaborate on my initial answer of `using the official documentation to work through small projects`. The truth is that I have actually added a step prior to diving into code or the official documentation.
+During the interview I was asked about my `process of learning` new technologies and would like to elaborate on my initial answer of `using the official documentation to work through small projects`. Reflecting on how I approached this project has highlighted that I have actually added a step prior to diving into code or the official documentation.
 
-I now usually start learning a new technology by finding a highly rated course online. Even if the course is centered around building a project I will just watch the entire course (usually on 2x speed) and take **as many notes as possible**
+I now usually start learning a new technology by finding a highly rated course online. Even if the course is centered around building a project (vs just covering concepts) I will just watch the entire course (usually on 2x speed) and take **as many notes as possible**
 
-This allows me to become fermiliar with the lingo / buzzwords that are used when approaching different concepts within the particular technolgy at hand.
+This allows me to become familiar with the lingo / buzzwords that are used when approaching different concepts within the particular technology at hand. Additionally, through my time at Lambda all of my notes are compiled into a private repo that I call my `codebrain`.
 
-Additionally through my time at Lambda I have contributed to a private repo that I call my `codebrain`. While it slows down the initial process of going through the course or starting the small project I have seen **tremendous** value down the road when I am able to retrieve information much faster when returning to a technology that I have not worked with in some time.
+While continuously pausing the lecture or stopping the project to take notes initially slows down my progress, I have seen that in the long run it dramatically increases the speed my development process. I am either able to immediately retrieve information which is already structured in my preferred format or I can better target the official documentation to learn more granular details as needed (and update my notes accordingly).
 
 ---
 
@@ -29,6 +29,7 @@ Additionally through my time at Lambda I have contributed to a private repo that
 2. App Created
     - No Initial Routing
     - LESS Styling
+3. CSS Reset w/ Meyers Reset v2.0
 
 </details>
 
