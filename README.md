@@ -34,7 +34,7 @@ While continuously pausing the lecture or stopping the project to take notes ini
     - on selection of a single hero `*ngIf` displays selected hero content and exposes the ability to upate the selected hero
 
 Screenshot:  
-    <img src="client/ReadMe_IMGs/0.2.0_HeroList.png" height='300px'>
+    <img src="ReadMe_IMGs/0.2.0_HeroList.png" height='300px'>
 </details>
 
 <details>
