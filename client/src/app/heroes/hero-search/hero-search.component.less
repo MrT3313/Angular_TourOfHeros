@@ -1,0 +1,49 @@
+@import '../../../styles/variables.less';
+
+#search-box {
+    width: 200px;
+    height: 20px;
+}
+
+h4 {
+    margin: 1rem 0 1rem 0;
+}
+
+label {
+    font-size: @font_reg; 
+    font-weight: bold;   
+}
+
+.search-result {
+    margin-top: 0;
+    padding-left: 0;
+    
+    li {
+        width: 195px;
+        height: 16px;
+        padding: 5px;
+
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        background-color: white;
+        font-size: @font_reg;
+        cursor: pointer;
+        list-style-type: none;
+        
+        a {
+            display: block;
+
+            color: @search_font;
+            text-decoration: none;
+          
+            &:hover, &:active {
+                color: white;
+            }
+        }
+
+        &:hover {
+            background-color: @search_hover;
+        }
+      }
+} 
