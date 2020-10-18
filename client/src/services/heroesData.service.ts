@@ -25,6 +25,8 @@ export class HeroesDataService {
   ) { }
 
   // METHODS
+
+  // - GET - //
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.baseUrl)
       .pipe(
@@ -42,6 +44,7 @@ export class HeroesDataService {
         )
   }
 
+  // - POST - //
   addHero(hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(
       this.baseUrl,
@@ -54,6 +57,7 @@ export class HeroesDataService {
       )
   }
 
+  // - PUT - //
   updateHero(hero: Hero): Observable<any> {
     return this.http.put(
       this.baseUrl,
@@ -66,6 +70,7 @@ export class HeroesDataService {
       )
   }
 
+  // - DEL - //
   deleteHero(hero: Hero | number): Observable<any> {
     const id = typeof hero === 'number' ? hero : hero.id
     const url = `${this.baseUrl}/${id}`
@@ -94,5 +99,19 @@ export class HeroesDataService {
   // UTILS
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
+  }
+
+  searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim()) {
+      return of([])
+    }
+    return this.http.get<Hero[]>(`${this.baseUrl}/?name=${term}`)
+      .pipe(
+        tap(x => x.length ? 
+          this.log(`found heroes matching "${term}"`) :
+          this.log(`no heroes matching "${term}"`)
+        ),
+        catchError(this.handleError<Hero[]>('searchHeroes', []))
+      )
   }
 }
