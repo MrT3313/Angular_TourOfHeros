@@ -34,6 +34,34 @@ h2 {
         background-color: @lightGrey_bg;
         cursor: pointer;
         
+        a {
+            display: flex;
+            align-items: center;
+
+            color: @grey_font;
+            text-decoration: none;
+
+            .badge, .name {
+                display: flex;
+                
+                font-size: @font_sm;
+            }
+            
+            .badge {
+                align-items: center;
+                justify-content: center;
+                
+                min-width: 3rem;
+                margin-right: .8rem;
+                padding: .5rem 0 .5rem 0;
+                border-radius: 4px 0 0 4px;
+                
+                color: white;
+                background-color: @steele_grey_bg;
+            }
+        }
+
+        
         &:hover {
             margin-left: .75rem;
             
@@ -49,25 +77,6 @@ h2 {
                 color: white;
                 background-color: @selectedHover_blueGreen_bg;
             }
-        }
-
-        .badge, .name {
-            display: flex;
-
-            font-size: @font_sm;
-        }
-
-        .badge {
-            align-items: center;
-            justify-content: center;
-    
-            min-width: 3rem;
-            margin-right: .8rem;
-            padding: .5rem 0 .5rem 0;
-            border-radius: 4px 0 0 4px;
-            
-            color: white;
-            background-color: @steele_grey_bg;
         }
     }
 }

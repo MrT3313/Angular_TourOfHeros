@@ -1,8 +1,38 @@
 @import '../styles/variables.less';
 
 .title {
-    margin: 1.5rem 0 1.5rem 0;
+    margin: 1.5rem 0 0 0;
 
     font-size: @font_lg;
     font-weight: bold;
 }
+
+nav {
+    display: flex;
+
+    a {
+        display: flex;
+
+        padding: 5px 10px;
+        margin-top: 10px;
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        color: @grey_font;
+        background-color: @lightGrey_bg;
+        font-size: @font_sm;
+        text-decoration: none;
+        border-radius: 4px;
+
+        &:hover {
+            color: #039be5;
+            background-color: @selected_grey_bg;
+        }
+
+        .active {
+            color: #039be5;
+        }
+    }
+} 

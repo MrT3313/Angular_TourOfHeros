@@ -20,3 +20,24 @@ h2 {
         }
     }
 }
+
+button {
+    margin-top: 20px;
+    border: none;
+    padding: 5px 10px;
+
+    font-family: Arial;
+    background-color: @lightGrey_bg;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: @selected_grey_bg;
+    }
+å
+    &:disabled {
+      background-color: @lightGrey_bg;
+      color: #ccc;
+      cursor: auto;
+    }
+  }

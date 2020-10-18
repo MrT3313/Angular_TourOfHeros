@@ -1,0 +1,51 @@
+@import '../../styles/variables.less';
+
+h3 {
+    text-align: center;
+
+    margin: 1rem 0;
+
+    font-size: @font_sm;
+    color: @grey_font;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        width: 20%;
+        margin-right: 1rem;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        text-decoration: none;
+        color: white;
+    
+        .module {
+            display: flex;
+            justify-content: center;
+
+            padding: 20px;
+
+            font-size: @font_sm;
+            background-color: #3f525c
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .module {
+        font-size: @font_sm / 2;
+        max-height: 75px; }
+}
+@media (max-width: 1024px) {
+    .grid {
+        margin: 0;
+    }
+    .module {
+        min-width: 60px;
+    }
+}
