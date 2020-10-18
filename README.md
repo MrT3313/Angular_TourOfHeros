@@ -19,6 +19,18 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details>
+<summary>0.9.0 - Hero Search</summary>
+
+1. Created `hero-search` component as nested child of `heroes` component
+2. Added `<app-hero-search>` element to `dashboard` component
+3. Updated `hero-search.html` to have:
+    - input section => event bound to `search()` which passes an updated term to search when the input changes
+    - result section => renders a list of results based on the response from the `heroes$` observable
+4. `hero-search.ts` is utilizing `debounceTime` / `distinctUntilChanged` / `switchMap` inside its `ngOnInit()` to control the number of HTTP requests sent to `searchHeroes()` method in `heroesDataService`
+
+</details>
+
+<details>
 <summary>0.8.0 - Update / Add / Delete Hero</summary>
 
 1. Update => `hero-detail.html` & `hero-detail.ts`
@@ -38,7 +50,7 @@ While continuously pausing the lecture or stopping the project to take notes ini
 </details>
 
 <details>
-<summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api<summary>
+<summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api</summary>
 
 1. Creating @Injectable `InMemoryDataService` with imported mock array of Hero interface types
 2. Udpated `heroesData.service.ts`
