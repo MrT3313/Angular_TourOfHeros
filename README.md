@@ -17,7 +17,18 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ---
 
 ## Project Timeline
-<details open>
+<details>
+<summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api<summary>
+
+1. Creating @Injectable `InMemoryDataService` with imported mock array of Hero interface types
+2. Udpated `heroesData.service.ts`
+    - `getHeroes()` & `getHero()` are both using `HttpClient` to retrieve data through a RxJS Observable
+        - Utilizing a `pipe` to handle errors
+        - Utilizing a `tap` to call messageService which has been consolidated into a `private log()` util method
+
+</details>
+
+<details>
 <summary>0.6.0 - Hero Detail Routing</summary>
 
 1. Added `getHero(id)` method to `heroesDataService`
