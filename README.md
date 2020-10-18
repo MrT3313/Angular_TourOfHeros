@@ -28,10 +28,19 @@ While continuously pausing the lecture or stopping the project to take notes ini
         - Added `save()` method that is calling the `updateHero()` method on the `heroesDataService` and upon on the completion of the Observable pushing the user back to previous page
     - `heroesDataService`
         - Added `updateHero` method
-            - passing configured `private httpOptions` configuration 
+            - passing configured `private httpOptions` configuration
             - Utilizing a `pipe` to handle errors
             - Utilizing a `tap` to call messageService
 2. Add
+    - `heroes.component.html`
+        - Added addHero button which is eveny bound to button click triggering `addhero` method
+    - `heroes.component.ts`
+        - Added addHero()` method that is calling `addHero()` method on `heroesDataService and on completion pushing user back to previous page
+    - `heroesDataService`
+        - Added `addHero` method
+            - passing configured `private httpOptions` configuration
+            - Utilizing a `pipe` to handle errors
+            - Utilizing a `tap` to call messageService
 3. Delete
 
 </details>

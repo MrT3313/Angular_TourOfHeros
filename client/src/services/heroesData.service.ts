@@ -42,6 +42,18 @@ export class HeroesDataService {
         )
   }
 
+  addHero(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(
+      this.baseUrl,
+      hero,
+      this.httpOptions
+    )
+      .pipe(
+        tap((newHero: Hero) => this.log(`Added hero w/ id=${newHero.id}`)),
+        catchError(this.handleError<any>(`updateHero id=${hero.id}`))
+      )
+  }
+
   updateHero(hero: Hero): Observable<any> {
     return this.http.put(
       this.baseUrl,
