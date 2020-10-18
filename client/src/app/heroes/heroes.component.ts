@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../../interface/hero.interface'
 import { HeroesDataService } from '../../services/heroesData.service'
+import { MessageService } from '../../services/message.service'
 
 @Component({
   selector: 'app-heroes',
@@ -16,7 +17,10 @@ export class HeroesComponent implements OnInit {
   
   // **notes** 
   // Must ASK for the service that was made available through the @Injectable() to be INJECTED
-  constructor(private heroesDataService: HeroesDataService) { }
+  constructor(
+    private heroesDataService: HeroesDataService,
+    private messageService: MessageService,
+  ) { }
 
   // INITIALIZATION
   ngOnInit(): void {
@@ -31,5 +35,6 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
   }
 }

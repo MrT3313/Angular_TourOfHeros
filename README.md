@@ -19,6 +19,21 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
+<summary>0.4.0 - Messages Service & Messages Component</summary>
+
+1. `message.service.ts` added to services directory
+    - Property: array of strings representing a cache of messages
+    - Methods
+        1. add() => pushes new message into cache
+        2. clear() => removes all messages from cache
+
+2. `heroData.service` using `message.service` to log requests for heros
+3. `heroes.component` using `message.service` to log when a user selects an individual hero
+4. Added `messages` component which is rendering in the `app.component.html` through an `*ngIf` if the messages cache is not empty
+
+</details>
+
+<details>
 <summary>0.3.1 - Heroes Data Service w/ RxJS Observable</summary>
 
 1. `heroesData.service.ts` is now using RxJS with an `Observable` return type and simulate the asynchronous fetching of data

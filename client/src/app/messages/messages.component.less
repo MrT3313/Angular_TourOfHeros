@@ -1,0 +1,50 @@
+@import '../../styles/variables.less';
+
+h2 {
+    margin: 2rem 0 1rem 0;
+
+    color: red;
+    font-size: @font_md;
+}
+
+body {
+    margin: 2em;
+}
+
+body, input[text], button {
+    color: crimson;
+    font-family: Cambria, Georgia;
+}
+
+button {
+    &.clear {
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: none;
+
+        font-family: Arial;
+        background-color: @lightGrey_bg;
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    &:hover {
+        background-color: @selected_grey_bg;
+    }
+
+    &:disabled {
+        background-color: @lightGrey_bg;
+        color: #aaa;
+        cursor: auto;
+    }
+    
+    &.clear {
+        color: @input_font;
+        margin-bottom: 12px;
+    }
+}
+
+.message {
+    font-size: @font_sm;
+}
+
