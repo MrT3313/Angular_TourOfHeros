@@ -17,6 +17,25 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ---
 
 ## Project Timeline
+
+<details>
+<summary>0.8.0 - Update / Add / Delete Hero</summary>
+
+1. Update
+    - `hero-detail-component.html`
+        - Added Save button which is event bound to button click triggering`save()` method
+    - `hero-detail-component.ts`
+        - Added `save()` method that is calling the `updateHero()` method on the `heroesDataService` and upon on the completion of the Observable pushing the user back to previous page
+    - `heroesDataService`
+        - Added `updateHero` method
+            - passing configured `private httpOptions` configuration 
+            - Utilizing a `pipe` to handle errors
+            - Utilizing a `tap` to call messageService
+2. Add
+3. Delete
+
+</details>
+
 <details>
 <summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api<summary>
 

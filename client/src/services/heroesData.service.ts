@@ -13,6 +13,11 @@ import { Hero } from '../interface/hero.interface'
 
 export class HeroesDataService {
   private baseUrl = 'api/MOCK_HEROES';
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
 
   constructor(  
     private http: HttpClient,
@@ -35,6 +40,18 @@ export class HeroesDataService {
           tap(_ => this.log(`fetched hero id=${id}`)),
           catchError(this.handleError<Hero>(`getHero id=${id}`))
         )
+  }
+
+  updateHero(hero: Hero): Observable<any> {
+    return this.http.put(
+      this.baseUrl,
+      hero,
+      this.httpOptions
+    )
+      .pipe(
+        tap(_ => this.log(`Updated hero id=${hero.id}`)),
+        catchError(this.handleError<any>(`updateHero id=${hero.id}`))
+      )
   }
 
   // HANDLERS
