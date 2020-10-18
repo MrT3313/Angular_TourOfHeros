@@ -19,6 +19,84 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
+<summary>0.4.0 - Messages Service & Messages Component</summary>
+
+1. `message.service.ts` added to services directory
+    - Property: array of strings representing a cache of messages
+    - Methods
+        1. add() => pushes new message into cache
+        2. clear() => removes all messages from cache
+
+2. `heroData.service` using `message.service` to log requests for heros
+3. `heroes.component` using `message.service` to log when a user selects an individual hero
+4. Added `messages` component which is rendering in the `app.component.html` through an `*ngIf` if the messages cache is not empty
+
+Screenshot:  
+    <img src="ReadMe_IMGs/0.4.0_MessageService.png" height='300px'>
+
+</details>
+
+<details>
+<summary>0.3.1 - Heroes Data Service w/ RxJS Observable</summary>
+
+1. `heroesData.service.ts` is now using RxJS with an `Observable` return type and simulate the asynchronous fetching of data
+2. `heroes.component.ts` is subscribing to the returned `Observable` and only updating `this.heroes` when data is returned
+
+</details>
+
+<details>
+<summary>0.3.0 - Heroes Data Service</summary>
+
+1. Created `services` directory
+    - Added `heroesData.service.ts`
+        - `@Injectable()` created the service and defined its injector as the root injector
+        - `getHeros()` is returning a mocked array of Hero interface types
+    - `heroes.component.ts` is requesting an injection of the `herosData` service and using the service in the `ngInit()` lifecycle method
+
+</details>
+
+<details>
+<summary>0.2.1 - Hero Detail SubComponent</summary>
+
+1. `hero-detail` component is now responsible for all logic relating to a selected hero
+    - `heroes.component.html` is using `one-way property binding` to pass a a selectedHero to the `hero-detail` component
+    - `hero-detail` is recieving the `one-way property binding` through an `@input()` which expects the passed data to be of the Hero interface type
+2. `heros` is only responsible for displaying list of heros
+
+- New (truncated and rearranged) `src` directory
+
+```
+    ├── src
+    │   ├── app
+    │   │   ├── app.component.html
+    │   │   ├── app.component.less
+    │   │   ├── app.component.spec.ts
+    │   │   ├── app.component.ts
+    │   │   ├── app.module.ts
+    │   │   └── heroes
+    │   │       ├── hero-detail
+    │   │       │   ├── hero-detail.component.html
+    │   │       │   ├── hero-detail.component.less
+    │   │       │   ├── hero-detail.component.spec.ts
+    │   │       │   └── hero-detail.component.ts
+    │   │       ├── heroes.component.html
+    │   │       ├── heroes.component.less
+    │   │       ├── heroes.component.spec.ts
+    │   │       └── heroes.component.ts
+    │   ├── __mocks__
+    │   │   └── heroes.mock.ts
+    │   ├── interface
+    │   │   └── hero.interface.ts
+    │   ├── styles
+    │   │   ├── cssReset.css
+    │   │   ├── global.less
+    │   │   └── variables.less
+    │   ├── styles.less
+```
+
+</details>
+
+<details>
 <summary>0.2.0 - Hero List</summary>
 
 1. Created separate `styles` directory

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from './hero.interface'
-import { MOCK_HEROES } from '../../__mocks__/heroes.mock'
+import { Hero } from '../../interface/hero.interface'
+import { HeroesDataService } from '../../services/heroesData.service'
+import { MessageService } from '../../services/message.service'
 
 @Component({
   selector: 'app-heroes',
@@ -10,16 +11,30 @@ import { MOCK_HEROES } from '../../__mocks__/heroes.mock'
 })
 
 export class HeroesComponent implements OnInit {
-  heroes = MOCK_HEROES;
+  // PROPERTIES
+  heroes: Hero[];
   selectedHero: Hero;
   
-  constructor() { }
+  // **notes** 
+  // Must ASK for the service that was made available through the @Injectable() to be INJECTED
+  constructor(
+    private heroesDataService: HeroesDataService,
+    private messageService: MessageService,
+  ) { }
 
+  // INITIALIZATION
   ngOnInit(): void {
+    this.getHeroes()
+  }
+
+  // METHODS
+  getHeroes(): void {
+    this.heroesDataService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes)
   }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
   }
-
 }
