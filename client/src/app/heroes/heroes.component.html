@@ -15,10 +15,14 @@
     >
         <a
             routerLink="/detail/{{ hero.id }}"
-            class="link"
+            class="hero"
         >
             <div class="badge">{{ hero.id }}</div> 
             <div class="name">{{ hero.name }}</div>
         </a>
+        <button 
+            class="delete right"
+            (click)="deleteHero(hero)"
+        >x</button>
     </li>
 </ul>

@@ -29,14 +29,16 @@ h2 {
         
         height: 100%;
         margin: .35rem;
+        padding-right: .8rem;
         border-radius: 4px;
         
         background-color: @lightGrey_bg;
         cursor: pointer;
         
-        a {
+        .hero {
             display: flex;
             align-items: center;
+            width: 100%;
 
             color: @grey_font;
             text-decoration: none;
@@ -58,6 +60,10 @@ h2 {
                 
                 color: white;
                 background-color: @steele_grey_bg;
+            }
+
+            .name {
+                flex-grow: 1;
             }
         }
 
