@@ -1,0 +1,87 @@
+@import '../../styles/variables.less';
+
+// Style Groupings
+// 1 - Positioning
+// 2 - Structural 
+// 3 - Additional Styling
+
+h2 {
+    margin: 2rem 0 1rem 0;
+
+    font-size: @font_md;
+}
+
+.heroes {
+    // Positioning
+    display: flex;
+    flex-direction: column;
+
+    // Structural
+    width: 15rem;
+    padding: 0;
+    
+    // Additional Styling
+    list-style-type: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        
+        height: 100%;
+        margin: .35rem;
+        border-radius: 4px;
+        
+        background-color: @lightGrey_bg;
+        cursor: pointer;
+        
+        &:hover {
+            margin-left: .75rem;
+            
+            color: @hover_font;
+            background-color: @hover_grey_bg;
+        }
+        
+        &.selected {
+            color: white;
+            background-color: @selected_grey_bg;
+            
+            &:hover {
+                color: white;
+                background-color: @selectedHover_blueGreen_bg;
+            }
+        }
+
+        .badge, .name {
+            display: flex;
+
+            font-size: @font_sm;
+        }
+
+        .badge {
+            align-items: center;
+            justify-content: center;
+    
+            min-width: 3rem;
+            margin-right: .8rem;
+            padding: .5rem 0 .5rem 0;
+            border-radius: 4px 0 0 4px;
+            
+            color: white;
+            background-color: @steele_grey_bg;
+        }
+    }
+}
+.selectedHero {
+    display: flex;
+    flex-direction: column;
+
+    font-size: @font_sm;
+
+    .content {
+        display: flex;
+
+        .label {
+            margin-right: .5rem;
+        }
+    }
+}
