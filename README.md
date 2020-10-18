@@ -19,7 +19,26 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
-<summary>Project Initialization</summary>
+<summary>0.2.0 - Hero List</summary>
+
+1. Created separate `styles` directory
+    - Moved `CSS Reset` & `Global Styles`
+    - Added LESS Variables
+        - Font Sizing
+        - Font Colors
+        - Background Colors
+2. Mocking array of 10 heros based on imported Hero type interface
+3. `heroes.component.html`
+    - Rendering unordered list of 10 heroes
+    - List styling accommodates up to `id: 10000`
+    - on selection of a single hero `*ngIf` displays selected hero content and exposes the ability to upate the selected hero
+
+Screenshot:  
+    <img src="client/ReadMe_IMGs/0.2.0_HeroList.png" height='300px'>
+</details>
+
+<details>
+<summary>0.1.0 - Project Initialization</summary>
 
 **StartTime:** Early Afternoon - Saturday 10/17
 
