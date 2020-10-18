@@ -18,12 +18,13 @@ export class HeroDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private heroesDataService: HeroesDataService,
     private location: Location,    
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getHero()
   }
 
+  // METHODS
   getHero(): void { 
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroesDataService.getHero(id)
@@ -35,6 +36,7 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(() => this.goBack())
   }
 
+  // UTILS
   goBack(): void {
     this.location.back()
   }

@@ -3,9 +3,9 @@
     <button 
         class="clear"
         (click)="messageService.clear()"
-        >clear</button>
+    >clear</button>
     <div 
         *ngFor='let message of messageService.messages'
         class="message"
-    > {{message}} </div>
+    >{{message}}</div>
 </div>
