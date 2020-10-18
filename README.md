@@ -18,7 +18,23 @@ While continuously pausing the lecture or stopping the project to take notes ini
 
 ## Project Timeline
 
-<details open>
+<details>
+<summary>0.5.0 - Initial Routing</summary>
+
+1. Added 3 routes to `app-routing.module.ts`
+    - path: '' => redirects to '/dashboard'
+    - path: 'dashboard' => `DashboardComponent`
+    - path: 'heroes' => `HeroesComponent`
+2. `app.compoent.html`
+    - Replaced `<app-heroes>` element with `<router-outlet>` element
+    - Added 2 `routerLinks`
+        1. '/heroes'
+        2. '/dashboard'
+3. Created `DashboardComponent` that is using the `HeroesDataService and rendering the name of heroes from index 1-5
+
+</details>
+
+<details>
 <summary>0.4.0 - Messages Service & Messages Component</summary>
 
 1. `message.service.ts` added to services directory
