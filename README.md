@@ -19,6 +19,17 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
+<summary>0.3.0 - Heroes Data Service</summary>
+
+1. Created `services` directory
+    - Added `heroesData.service.ts`
+        - `@Injectable()` created the service and defined its injector as the root injector
+        - `getHeros()` is returning a mocked array of Hero interface types
+    - `heroes.component.ts` is requesting an injection of the `herosData` service and using the service in the `ngInit()` lifecycle method
+
+</details>
+
+<details>
 <summary>0.2.1 - Hero Detail SubComponent</summary>
 
 1. `hero-detail` component is now responsible for all logic relating to a selected hero
