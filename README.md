@@ -17,6 +17,24 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ---
 
 ## Project Timeline
+<details open>
+<summary>0.6.0 - Hero Detail Routing</summary>
+
+1. Added `getHero(id)` method to `heroesDataService`
+2. Added `detail/:id` route to `app-routing.module.ts`
+3. Cleaned `heroes.component.html` & `heroes.component.ts` of any selection logic now that routerLink will send the user to the appropriate route
+4. Updated `hero-detail.component.ts`
+    - Getting selected hero ID from the `paramMap.get()` provided through  the `ActivatedRoute` import. ID is being passed into local `getHero()` method which is called in `ngOnInit()` and using `heroDataService.getHero()`
+    - Added `goBack()` method to return to previous page through the `Location` import
+
+Screenshots:
+- Dashboard:  
+<img src="ReadMe_IMGs/0.6.0_HeroDetailRouting_Dashboard.png" height='300px'>
+
+- Hero Detail:  
+<img src="ReadMe_IMGs/0.6.0._Her0DetailRouting_Detail.png" height='300px'>
+
+</details>
 
 <details>
 <summary>0.5.0 - Initial Routing</summary>
