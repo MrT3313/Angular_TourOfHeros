@@ -19,6 +19,14 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
+<summary>0.3.1 - Heroes Data Service w/ RxJS Observable</summary>
+
+1. `heroesData.service.ts` is now using RxJS with an `Observable` return type and simulate the asynchronous fetching of data
+2. `heroes.component.ts` is subscribing to the returned `Observable` and only updating `this.heroes` when data is returned
+
+</details>
+
+<details>
 <summary>0.3.0 - Heroes Data Service</summary>
 
 1. Created `services` directory
