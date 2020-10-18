@@ -28,11 +28,12 @@ While continuously pausing the lecture or stopping the project to take notes ini
     - Added `goBack()` method to return to previous page through the `Location` import
 
 Screenshots:
-- Dashboard:  
-<img src="ReadMe_IMGs/0.6.0_HeroDetailRouting_Dashboard.png" height='300px'>
 
-- Hero Detail:  
-<img src="ReadMe_IMGs/0.6.0._Her0DetailRouting_Detail.png" height='300px'>
+1. Dashboard:  
+    <img src="ReadMe_IMGs/0.6.0_HeroDetailRouting_Dashboard.png" height='300px'>
+
+2. Hero Detail:    
+    <img src="ReadMe_IMGs/0.6.0._Her0DetailRouting_Detail.png" height='300px'>
 
 </details>
 
