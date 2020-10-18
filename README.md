@@ -19,6 +19,47 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ## Project Timeline
 
 <details open>
+<summary>0.2.1 - Hero Detail SubComponent</summary>
+
+1. `hero-detail` component is now responsible for all logic relating to a selected hero
+    - `heroes.component.html` is using `one-way property binding` to pass a a selectedHero to the `hero-detail` component
+    - `hero-detail` is recieving the `one-way property binding` through an `@input()` which expects the passed data to be of the Hero interface type
+2. `heros` is only responsible for displaying list of heros
+
+- New (truncated and rearranged) `src` directory
+
+```
+    ├── src
+    │   ├── app
+    │   │   ├── app.component.html
+    │   │   ├── app.component.less
+    │   │   ├── app.component.spec.ts
+    │   │   ├── app.component.ts
+    │   │   ├── app.module.ts
+    │   │   └── heroes
+    │   │       ├── hero-detail
+    │   │       │   ├── hero-detail.component.html
+    │   │       │   ├── hero-detail.component.less
+    │   │       │   ├── hero-detail.component.spec.ts
+    │   │       │   └── hero-detail.component.ts
+    │   │       ├── heroes.component.html
+    │   │       ├── heroes.component.less
+    │   │       ├── heroes.component.spec.ts
+    │   │       └── heroes.component.ts
+    │   ├── __mocks__
+    │   │   └── heroes.mock.ts
+    │   ├── interface
+    │   │   └── hero.interface.ts
+    │   ├── styles
+    │   │   ├── cssReset.css
+    │   │   ├── global.less
+    │   │   └── variables.less
+    │   ├── styles.less
+```
+
+</details>
+
+<details>
 <summary>0.2.0 - Hero List</summary>
 
 1. Created separate `styles` directory
