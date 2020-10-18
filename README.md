@@ -21,27 +21,19 @@ While continuously pausing the lecture or stopping the project to take notes ini
 <details>
 <summary>0.8.0 - Update / Add / Delete Hero</summary>
 
-1. Update
-    - `hero-detail-component.html`
-        - Added Save button which is event bound to button click triggering`save()` method
-    - `hero-detail-component.ts`
-        - Added `save()` method that is calling the `updateHero()` method on the `heroesDataService` and upon on the completion of the Observable pushing the user back to previous page
-    - `heroesDataService`
-        - Added `updateHero` method
-            - passing configured `private httpOptions` configuration
-            - Utilizing a `pipe` to handle errors
-            - Utilizing a `tap` to call messageService
-2. Add
-    - `heroes.component.html`
-        - Added addHero button which is eveny bound to button click triggering `addhero` method
-    - `heroes.component.ts`
-        - Added addHero()` method that is calling `addHero()` method on `heroesDataService and on completion pushing user back to previous page
-    - `heroesDataService`
-        - Added `addHero` method
-            - passing configured `private httpOptions` configuration
-            - Utilizing a `pipe` to handle errors
-            - Utilizing a `tap` to call messageService
-3. Delete
+1. Update => `hero-detail.html` & `hero-detail.ts`
+    - Added Save button which is event bound to button click triggering`updateHero()` method which calls the `udpateHero()` method on the `heroesDataService`
+
+2. Add => `heroes.html` & heroes.ts`
+    - Added input box for new hero name
+    - Added Add button to pass local reference to #localName input into event bound `addHero()` method which calls the `addHero` method on the `heroesDataService`
+
+3. Delete => `heroes.html` & heroes.ts`
+    - Added `x` box on each hero `li` which is event bound to click and passing the hero into the `DeleteHero` method which calls the `deleteHero()` method on the `heroesDataDataService`
+
+- All method in `heroesDataService` are:
+    - Utilizing a `pipe` to handle errors
+    - Utilizing a `tap` to call messageService
 
 </details>
 
