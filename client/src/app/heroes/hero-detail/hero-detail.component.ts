@@ -1,6 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+import { Location } from '@angular/common'
 
 import { Hero } from '../../../interface/hero.interface'
+import { HeroesDataService } from '../../../services/heroesData.service'
 
 @Component({
   selector: 'app-hero-detail',
@@ -9,12 +12,26 @@ import { Hero } from '../../../interface/hero.interface'
 })
 
 export class HeroDetailComponent implements OnInit {
-  // heroes.component.html is using property binding (one way)to select and pass 'hero' into <app-hero-detail> (the selector of this @Component)
-  @Input() hero: Hero
+  hero: Hero
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private heroesDataService: HeroesDataService,
+    private location: Location,    
+  ) { }
 
   ngOnInit(): void {
+    this.getHero()
+  }
+
+  getHero(): void { 
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.heroesDataService.getHero(id)
+      .subscribe(hero => this.hero = hero)
+  }
+
+  goBack(): void {
+    this.location.back()
   }
 
 }
