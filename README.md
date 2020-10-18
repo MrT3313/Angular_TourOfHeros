@@ -31,6 +31,9 @@ While continuously pausing the lecture or stopping the project to take notes ini
 3. `heroes.component` using `message.service` to log when a user selects an individual hero
 4. Added `messages` component which is rendering in the `app.component.html` through an `*ngIf` if the messages cache is not empty
 
+Screenshot:  
+    <img src="ReadMe_IMGs/0.4.0_MessageService.png" height='300px'>
+
 </details>
 
 <details>
