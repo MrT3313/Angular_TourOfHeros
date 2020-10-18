@@ -17,6 +17,26 @@ While continuously pausing the lecture or stopping the project to take notes ini
 ---
 
 ## Project Timeline
+
+<details>
+<summary>0.8.0 - Update / Add / Delete Hero</summary>
+
+1. Update => `hero-detail.html` & `hero-detail.ts`
+    - Added Save button which is event bound to button click triggering`updateHero()` method which calls the `udpateHero()` method on the `heroesDataService`
+
+2. Add => `heroes.html` & heroes.ts`
+    - Added input box for new hero name
+    - Added Add button to pass local reference to #localName input into event bound `addHero()` method which calls the `addHero` method on the `heroesDataService`
+
+3. Delete => `heroes.html` & heroes.ts`
+    - Added `x` box on each hero `li` which is event bound to click and passing the hero into the `DeleteHero` method which calls the `deleteHero()` method on the `heroesDataDataService`
+
+- All method in `heroesDataService` are:
+    - Utilizing a `pipe` to handle errors
+    - Utilizing a `tap` to call messageService
+
+</details>
+
 <details>
 <summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api<summary>
 

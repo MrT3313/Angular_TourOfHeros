@@ -13,6 +13,11 @@ import { Hero } from '../interface/hero.interface'
 
 export class HeroesDataService {
   private baseUrl = 'api/MOCK_HEROES';
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
 
   constructor(  
     private http: HttpClient,
@@ -35,6 +40,44 @@ export class HeroesDataService {
           tap(_ => this.log(`fetched hero id=${id}`)),
           catchError(this.handleError<Hero>(`getHero id=${id}`))
         )
+  }
+
+  addHero(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(
+      this.baseUrl,
+      hero,
+      this.httpOptions
+    )
+      .pipe(
+        tap((newHero: Hero) => this.log(`Added hero w/ id=${newHero.id}`)),
+        catchError(this.handleError<any>(`updateHero id=${hero.id}`))
+      )
+  }
+
+  updateHero(hero: Hero): Observable<any> {
+    return this.http.put(
+      this.baseUrl,
+      hero,
+      this.httpOptions
+    )
+      .pipe(
+        tap(_ => this.log(`Updated hero id=${hero.id}`)),
+        catchError(this.handleError<any>(`updateHero id=${hero.id}`))
+      )
+  }
+
+  deleteHero(hero: Hero | number): Observable<any> {
+    const id = typeof hero === 'number' ? hero : hero.id
+    const url = `${this.baseUrl}/${id}`
+
+    return this.http.delete<Hero>(
+      url,
+      this.httpOptions
+    )
+      .pipe(
+        tap(_ => this.log(`Deleted Hero id${id}`)),
+        catchError(this.handleError<any>(`deletedHero`))
+      )
   }
 
   // HANDLERS
