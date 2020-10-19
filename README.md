@@ -61,11 +61,11 @@ I look forward to being able to speak with you regarding improvements that I can
 1. Update => `hero-detail.html` & `hero-detail.ts`
     - Added Save button which is event bound to button click triggering`updateHero()` method which calls the `updateHero()` method on the `heroesDataService`
 
-2. Add => `heroes.html` & heroes.ts`
+2. Add => `heroes.html` & `heroes.ts`
     - Added input box for new hero name
     - Added Add button to pass local reference to #localName input into event bound `addHero()` method which calls the `addHero` method on the `heroesDataService`
 
-3. Delete => `heroes.html` & heroes.ts`
+3. Delete => `heroes.html` & `heroes.ts`
     - Added `x` box on each hero `li` which is event bound to click and passing the hero into the `DeleteHero` method which calls the `deleteHero()` method on the `heroesDataDataService`
 
 - All method in `heroesDataService` are:
@@ -154,7 +154,7 @@ Screenshot:
     - Added `heroesData.service.ts`
         - `@Injectable()` created the service and defined its injector as the root injector
         - `getHeros()` is returning a mocked array of Hero interface types
-    - `heroes.component.ts` is requesting an injection of the `herosData` service and using the service in the `ngInit()` lifecycle method
+2. `heroes.component.ts` is requesting an injection of the `herosData` service and using the service in the `ngInit()` lifecycle method
 
 </details>
 
