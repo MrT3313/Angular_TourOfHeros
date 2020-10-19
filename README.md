@@ -6,17 +6,42 @@ Thank you _**Anonymous Company**_ for the opportunity to interview with you and 
 
 ---
 
-During the interview I was asked about my `process of learning` new technologies and would like to elaborate on my initial answer of `using the official documentation to work through small projects`. Reflecting on how I approached this project has highlighted that I have actually added a step prior to diving into code or the official documentation.
+## Introduction
 
-I now usually start learning a new technology by finding a highly rated course online. Even if the course is centered around building a project (vs just covering concepts) I will just watch the entire course (usually on 2x speed) and take **as many notes as possible**
+During the interview I was asked about my `process of learning` new technologies and in approaching this project I realized that I missed an important part of my process. I have increasingly starting learning new technologies by finding a highly rated course online. Even if the course is centered around building a project (vs just covering concepts) I will just watch the entire course (usually on 2x speed) and take **as many notes as possible**.
 
 This allows me to become familiar with the lingo / buzzwords that are used when approaching different concepts within the particular technology at hand. Additionally, through my time at Lambda all of my notes are compiled into a private repo that I call my `codebrain`.
 
-While continuously pausing the lecture or stopping the project to take notes initially slows down my progress, I have seen that in the long run it dramatically increases the speed my development process. I am either able to immediately retrieve information which is already structured in my preferred format or I can better target the official documentation to learn more granular details as needed (and update my notes accordingly).
+While continuously pausing the lecture or stopping the base project to take / update my notes initially slows down my progress, I have seen that in the long run it dramatically increases the speed my development. I am either able to immediately retrieve information which is already structured in my preferred format from my `codebrain` or I can better target the official documentation to learn more granular details as needed (and update my notes accordingly).
+
+## Pre Submission Update
+
+We were able to work through my dad being _absolutly sure_ that he only cut the cable (not the internet) while doing renovations on Saturday and a power outage Sunday to learn ALOT about Angular this weekend!
+
+I look forward to being able to speak with you reguarding improvements that I can make!
 
 ---
 
+## Version 1 Submission Images
+
+| Dashboard | Heroes |
+| ---       | ---    |
+| <img src="ReadMe_IMGs/1.0.0_V1_Dashboard.png" width='294px'> | <img src="ReadMe_IMGs/1.0.0_V1_Heroes.png" height='300px'> |
+
+| Hero Detail | Hero Search | 
+| ---         | --- | 
+| <img src="ReadMe_IMGs/1.0.0_V1_HeroData.png" height='300px'> | <img src="ReadMe_IMGs/1.0.0_V1_HeroSearch.png" height='300px'> |
+
 ## Project Timeline
+
+<details>
+<summary>1.0.0 - Styling Update & Code Cleanup</summary>
+
+1. Added `mixin` for a standard button which can accept a `@font_color` & `@background_color` as arguments
+2. Overhauled LESS variables
+3. General code cleanup throughout project
+
+</details>
 
 <details>
 <summary>0.9.0 - Hero Search</summary>
@@ -34,7 +59,7 @@ While continuously pausing the lecture or stopping the project to take notes ini
 <summary>0.8.0 - Update / Add / Delete Hero</summary>
 
 1. Update => `hero-detail.html` & `hero-detail.ts`
-    - Added Save button which is event bound to button click triggering`updateHero()` method which calls the `udpateHero()` method on the `heroesDataService`
+    - Added Save button which is event bound to button click triggering`updateHero()` method which calls the `updateHero()` method on the `heroesDataService`
 
 2. Add => `heroes.html` & heroes.ts`
     - Added input box for new hero name
@@ -53,7 +78,7 @@ While continuously pausing the lecture or stopping the project to take notes ini
 <summary>0.7.0 - Simulating HTTP Request w/ angular-in-memory-web-api</summary>
 
 1. Creating @Injectable `InMemoryDataService` with imported mock array of Hero interface types
-2. Udpated `heroesData.service.ts`
+2. Updated `heroesData.service.ts`
     - `getHeroes()` & `getHero()` are both using `HttpClient` to retrieve data through a RxJS Observable
         - Utilizing a `pipe` to handle errors
         - Utilizing a `tap` to call messageService which has been consolidated into a `private log()` util method
@@ -105,7 +130,7 @@ Screenshots:
         1. add() => pushes new message into cache
         2. clear() => removes all messages from cache
 
-2. `heroData.service` using `message.service` to log requests for heros
+2. `heroData.service` using `message.service` to log requests for heroes
 3. `heroes.component` using `message.service` to log when a user selects an individual hero
 4. Added `messages` component which is rendering in the `app.component.html` through an `*ngIf` if the messages cache is not empty
 
@@ -137,8 +162,8 @@ Screenshot:
 <summary>0.2.1 - Hero Detail SubComponent</summary>
 
 1. `hero-detail` component is now responsible for all logic relating to a selected hero
-    - `heroes.component.html` is using `one-way property binding` to pass a a selectedHero to the `hero-detail` component
-    - `hero-detail` is recieving the `one-way property binding` through an `@input()` which expects the passed data to be of the Hero interface type
+    - `heroes.component.html` is using `one-way property binding` to pass a selectedHero to the `hero-detail` component
+    - `hero-detail` is receiving the `one-way property binding` through an `@input()` which expects the passed data to be of the Hero interface type
 2. `heros` is only responsible for displaying list of heros
 
 - New (truncated and rearranged) `src` directory
@@ -183,11 +208,11 @@ Screenshot:
         - Font Sizing
         - Font Colors
         - Background Colors
-2. Mocking array of 10 heros based on imported Hero type interface
+2. Mocking array of 10 heroes based on imported Hero type interface
 3. `heroes.component.html`
     - Rendering unordered list of 10 heroes
     - List styling accommodates up to `id: 10000`
-    - on selection of a single hero `*ngIf` displays selected hero content and exposes the ability to upate the selected hero
+    - on selection of a single hero `*ngIf` displays selected hero content and exposes the ability to update the selected hero
 
 Screenshot:  
     <img src="ReadMe_IMGs/0.2.0_HeroList.png" height='300px'>
