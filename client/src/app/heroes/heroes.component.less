@@ -1,9 +1,5 @@
 @import '../../styles/variables.less';
-
-// Style Groupings
-// 1 - Positioning
-// 2 - Structural 
-// 3 - Additional Styling
+@import '../../styles/mixins.less';
 
 h2 {
     margin: 2rem 0 1rem 0;
@@ -11,16 +7,21 @@ h2 {
     font-size: @font_md;
 }
 
+.newHero { 
+    font-size: @font_reg;
+
+    button {
+        .standardButton()
+    }
+}
+
 .heroes {
-    // Positioning
     display: flex;
     flex-direction: column;
 
-    // Structural
     width: 15rem;
     padding: 0;
     
-    // Additional Styling
     list-style-type: none;
 
     li {
@@ -32,12 +33,13 @@ h2 {
         padding-right: .8rem;
         border-radius: 4px;
         
-        background-color: @lightGrey_bg;
+        background-color: @light_grey;
         cursor: pointer;
         
         .hero {
             display: flex;
             align-items: center;
+            
             width: 100%;
 
             color: @grey_font;
@@ -46,7 +48,7 @@ h2 {
             .badge, .name {
                 display: flex;
                 
-                font-size: @font_sm;
+                font-size: @font_reg;
             }
             
             .badge {
@@ -59,7 +61,7 @@ h2 {
                 border-radius: 4px 0 0 4px;
                 
                 color: white;
-                background-color: @steele_grey_bg;
+                background-color: @darkSteele_grey;
             }
 
             .name {
@@ -67,22 +69,20 @@ h2 {
             }
         }
 
-        
         &:hover {
             margin-left: .75rem;
             
             color: @hover_font;
-            background-color: @hover_grey_bg;
+            background-color: @hover_grey;
         }
-        
-        &.selected {
-            color: white;
-            background-color: @selected_grey_bg;
-            
-            &:hover {
-                color: white;
-                background-color: @selectedHover_blueGreen_bg;
-            }
-        }
+    }
+
+    .delete {
+        padding: .3rem .6rem .3rem .6rem;
+        border: none;
+        border-radius: @borderRadius;
+
+        color: white;
+        background-color: @darkSteele_grey;
     }
 }

@@ -12,12 +12,13 @@ import { HeroesDataService } from '../../services/heroesData.service'
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroesDataSerivice: HeroesDataService) { }
+  constructor(private heroesDataSerivice: HeroesDataService) {}
 
   ngOnInit(): void {
     this.getHeroes()
   }
 
+  // METHODS
   getHeroes(): void {
     this.heroesDataSerivice.getHeroes()
       .subscribe(heroes => this.heroes = heroes.slice(1,5))

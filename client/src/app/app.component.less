@@ -3,6 +3,7 @@
 .title {
     margin: 1.5rem 0 0 0;
 
+    color: @title_blue_font;
     font-size: @font_lg;
     font-weight: bold;
 }
@@ -15,24 +16,24 @@ nav {
 
         padding: 5px 10px;
         margin-top: 10px;
+        
+        color: @grey_font;
+        background-color: @light_grey;
+        font-size: @font_reg;
+        text-decoration: none;
+        border-radius: 4px;
 
         &:first-child {
             margin-right: 1rem;
         }
 
-        color: @grey_font;
-        background-color: @lightGrey_bg;
-        font-size: @font_sm;
-        text-decoration: none;
-        border-radius: 4px;
-
         &:hover {
-            color: #039be5;
-            background-color: @selected_grey_bg;
+            color: @highlight_blue_font;
+            background-color: @hover_grey;
         }
 
         .active {
-            color: #039be5;
+            color: @highlight_blue_font;
         }
     }
 } 

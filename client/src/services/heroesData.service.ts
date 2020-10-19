@@ -22,10 +22,9 @@ export class HeroesDataService {
   constructor(  
     private http: HttpClient,
     private messageService: MessageService
-  ) { }
+  ) {}
 
   // METHODS
-
   // - GET - //
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.baseUrl)

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from '../services/in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,6 +12,7 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 import { HeroesComponent } from './heroes/heroes.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HeroSearchComponent } from './heroes/hero-search/hero-search.component';
+import { InMemoryDataService } from '../services/in-memory-data.service';
 
 @NgModule({
   declarations: [

@@ -5,7 +5,7 @@ h3 {
 
     margin: 1rem 0;
 
-    font-size: @font_sm;
+    font-size: @font_reg;
     color: @grey_font;
 }
 
@@ -17,35 +17,36 @@ h3 {
         width: 20%;
         margin-right: 1rem;
 
+        text-decoration: none;
+        color: white;
+
         &:last-child {
             margin: 0;
         }
-
-        text-decoration: none;
-        color: white;
     
-        .module {
+        .topHero {
             display: flex;
             justify-content: center;
+            align-items: center;
 
-            padding: 20px;
+            height: 3.5rem;
+            padding: 1.25rem;
 
-            font-size: @font_sm;
-            background-color: #3f525c
+            border-radius: @borderRadius; 
+            font-size: @font_reg;
+            background-color: @darkSteele_grey;
+            
+            &:hover { 
+                color: @hover_font;
+                background-color: @hover_grey;
+            }
+
+            @media (max-width: 600px) {
+                height: 2rem; 
+    
+                font-size: @font_sm;
+            }
         }
     }
 }
 
-@media (max-width: 600px) {
-    .module {
-        font-size: @font_sm / 2;
-        max-height: 75px; }
-}
-@media (max-width: 1024px) {
-    .grid {
-        margin: 0;
-    }
-    .module {
-        min-width: 60px;
-    }
-}
