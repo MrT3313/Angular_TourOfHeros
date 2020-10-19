@@ -12,13 +12,13 @@ During the interview I was asked about my `process of learning` new technologies
 
 This allows me to become familiar with the lingo / buzzwords that are used when approaching different concepts within the particular technology at hand. Additionally, through my time at Lambda all of my notes are compiled into a private repo that I call my `codebrain`.
 
-While continuously pausing the lecture or stopping the base project to take / update my notes initially slows down my progress, I have seen that in the long run it dramatically increases the speed my development. I am either able to immediately retrieve information which is already structured in my preferred format from my `codebrain` or I can better target the official documentation to learn more granular details as needed (and update my notes accordingly).
+While continuously pausing the lecture or stopping the base project to take / update my notes initially slows down my progress, I have seen that in the long run it dramatically increases the speed of my development. I am either able to immediately retrieve information which is already structured in my preferred format from my `codebrain` or I can better target the official documentation to learn more granular details as needed (and update my notes accordingly).
 
 ## Pre Submission Update
 
-We were able to work through my dad being _absolutly sure_ that he only cut the cable (not the internet) while doing renovations on Saturday and a power outage Sunday to learn ALOT about Angular this weekend!
+We were able to work through my dad being _absolutely sure_ that he only cut the cable (not the internet) while doing renovations on Saturday and a power outage Sunday to learn ALOT about Angular this weekend!
 
-I look forward to being able to speak with you reguarding improvements that I can make!
+I look forward to being able to speak with you regarding improvements that I can make!
 
 ---
 

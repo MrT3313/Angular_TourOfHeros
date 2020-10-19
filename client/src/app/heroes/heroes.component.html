@@ -12,8 +12,8 @@
 <ul class='heroes'>
     <li *ngFor="let hero of heroes" >
         <a
-            routerLink="/detail/{{ hero.id }}"
             class="hero"
+            routerLink="/detail/{{ hero.id }}"
         >
             <div class="badge">{{ hero.id }}</div> 
             <div class="name">{{ hero.name }}</div>

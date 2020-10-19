@@ -31,7 +31,7 @@ export class HeroSearchComponent implements OnInit {
     );
   }
 
-  // UTILS
+  // METHODS
   search(term: string): void {
     this.searchTerms.next(term);
   }
